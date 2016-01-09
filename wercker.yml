@@ -1,0 +1,13 @@
+box: michilu/deploy-gh-pages
+build:
+  steps:
+    - script:
+        name: nothing
+        code: echo
+deploy:
+  steps:
+    # https://github.com/lvivier/step-gh-pages
+    - lukevivier/gh-pages:
+      domain: test.u360inc.com
+      repo: se4na/cautious-octo-train
+      token: $GITHUB_TOKEN
